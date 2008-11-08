@@ -1,0 +1,53 @@
+propel:
+  user:
+    _uniques:
+      uniqusername:   [username]
+    id:
+    username:         varchar(32)
+    password:         varchar(32)
+    real_name:        varchar(255)
+    email:            varchar(255)
+    enabled:          boolean
+    access:           { type: tinyint, default: 12 }
+    # ACCESS
+    #  1: Backend Admin
+    #  2: Backend User
+    # 11: Frontend Admin
+    # 12: Frontend User
+    created_at:
+    updated_at:
+
+  post:
+    _uniques:
+      uniqslug:        [slug]
+    id:
+    created_at:
+    slug:              varchar(255)
+    title:             varchar(255)
+    byline:            varchar(128)
+    posted_at:         timestamp
+    body:              longvarchar
+
+  tag:
+    _uniques:
+      uniqname:       [name]
+    id:
+    created_at:
+    name:             varchar(32)
+    description:      longvarchar
+
+  post_tag:
+    _attributes:      { defaultIdMethod: none }
+    _uniques:
+      uniqa:          [post_id, tag_id]
+    post_id:          { type: integer, foreignTable: post, foreignReference: id, onDelete: CASCADE }
+    tag_id:           { type: integer, foreignTable: tag, foreignReference: id, onDelete: CASCADE }
+
+  actionlog:
+    id:
+    who:               varchar(255)
+    what:              varchar(255)
+    where:             varchar(255)
+    why:               varchar(255)
+    when:              timestamp
+    from:              varchar(32)

@@ -1,0 +1,6 @@
+User:
+  insecure:
+    username:   'root'
+    password:   'toor'
+    enabled:    1
+    access:     1

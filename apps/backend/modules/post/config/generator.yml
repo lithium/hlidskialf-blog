@@ -1,0 +1,23 @@
+generator:
+  class:                  sfPropelAdminGenerator
+  param:
+    model_class:          Post
+    theme:                default
+
+    list:
+      title:              Posts
+      display:            [=slug, title, byline, tag_string, posted_at, created_at]
+      actions:
+        _create:          { name: New Post }
+
+    edit:
+      title:              Edit Post
+      display:
+        *Post*:           [title, slug, byline, posted_at]
+        NONE:             [_tags, body]
+      fields:
+        body:             { params: size=80x20 }
+      actions:
+        _delete:
+        _save:            { name: Save }
+        _save_and_list:   { name: Done }

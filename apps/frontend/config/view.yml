@@ -1,0 +1,15 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:         
+    #description:   
+    robots:        index, follow
+
+  stylesheets:    [main, frontend]
+
+  javascripts:    []
+
+  has_layout:     on
+  layout:         layout

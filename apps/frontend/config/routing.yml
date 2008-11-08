@@ -1,0 +1,19 @@
+# default rules
+homepage:
+  url:   /
+  param: { module: post, action: index }
+
+rant:
+  url:   /rant/:slug
+  param: { module: post, action: show }
+
+tag:
+  url:   /tag/:tag
+  param: { module: tag, action: show }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

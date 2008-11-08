@@ -1,0 +1,18 @@
+div#auth-notice {
+  text-align: right;
+  font-size: 9pt;
+}
+
+.navbar .navlink {
+float: left;
+margin: 5px 10px 5px 10px;
+}
+.navbar .navlink a:link,
+.navbar .navlink a:visited {
+  color: #00f;
+  text-decoration: none;
+}
+
+.float-clear { clear: both; }
+.float-left { float: left; }
+.float-right { float: right; }

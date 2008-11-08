@@ -1,0 +1,11 @@
+@import url("/sf/sf_admin/css/main.css");
+
+#sf_admin_container #sf_admin_bar {
+position: static;
+width: 330px;
+float: right;
+}
+#sf_admin_container #sf_admin_content {
+margin-right: 0;
+clear: both;
+}

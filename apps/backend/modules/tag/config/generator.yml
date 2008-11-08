@@ -1,0 +1,23 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Tag
+    theme:            default
+
+    list:
+      title:          Tags
+      display:        [=name, description, created_at]
+      actions:        
+
+    edit:
+      title:          Edit Tag
+      display:
+        NONE:         [name, description]
+      fields:
+        description:  { params: size=80x20 }
+        name:         { params: size=64 }
+      actions:
+        _delete:
+        _save:            { name: Save }
+        _save_and_list:   { name: Done }
+
