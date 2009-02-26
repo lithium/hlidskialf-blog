@@ -1,2 +1,5 @@
 # default values
 #all:
+#
+all:
+  sf_app_title:   android.hlidskialf.com

@@ -1,0 +1,66 @@
+
+.post-byline {
+  text-align: right;
+  font-size: 13px;
+  color: #424242;
+  letter-spacing: 0.3px;
+}
+.post-byline .post-date {
+  font-family: sans-serif;
+  padding-right: 8px;
+}
+.post-byline .post-author {
+  border-left: 1px solid #424242;
+  padding-left: 12px;
+}
+div.post-holder {
+  margin: 15px auto 5px auto;
+  padding: 5px;
+}
+.post-title {
+  font-family: "arial black", arial;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.post-body {
+  font-family: "Georgia", serif;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+}
+
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5 {
+  font-family: "arial black", arial;
+  letter-spacing: 1.5px;
+}
+
+
+.post-tags a:link,
+.post-tags a:visited,
+.post-tags a:hover {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+
+div.post-index .post-byline {
+  margin-top: -1em;
+}
+div.post-index .post-title a:link,
+div.post-index .post-title a:visited, 
+div.post-index .post-title a:hover {
+  font-family: "arial black", arial;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #0000e0;
+}
+div.post-index .post-title {
+  text-align: left;
+}
+div.post-index .post-body {
+  font-size: 0.8em;
+}
