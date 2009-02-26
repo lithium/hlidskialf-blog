@@ -17,7 +17,7 @@ class postActions extends sfActions
   {
     $this->post = PostPeer::retrieveBySlug($this->getRequestParameter('slug'));
     $this->forward404Unless($this->post);
-    $title = sfConfig::get('sf_app_title','android.hlidskialf.com');
+    $title = sfConfig::get('sf_app_title','sitename');
     $this->getResponse()->setTitle($this->post->getTitle().' | '.$title);
   }
 
