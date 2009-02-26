@@ -1,8 +1,8 @@
-
+<h1>Blog</h1>
 <div class="post-index">
 <?foreach($pager->getResults() as $post):?>
 <div class="post-holder">
-  <div class="post-title"><?=link_to($post->getTitle(),$post->getUrl())?></div>
+  <div class="post-title"><a href="/post/<?=$post->getSlug()?>"><?=$post->getTitle()?></a></div>
   <div class="post-byline">
     <span class="post-date"><?=$post->getPostedAt()?></span>
     <span class="post-author"><?=$post->getByline()?></span>

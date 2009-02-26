@@ -10,7 +10,7 @@
 class Post extends BasePost
 {
   public function getPostedAt($fmt='M d Y') { return parent::getPostedAt($fmt); }
-  public function getUrl() { return '/rant/'.$this->getSlug(); }
+  public function getUrl() { return '/post/'.$this->getSlug(); }
   public function getHref() { return sprintf('<a href="%s">%s</a>',$this->getUrl(),$this->getTitle()); }
 
   public function addTag($tag)
@@ -56,13 +56,15 @@ class Post extends BasePost
       if ($idx !== FALSE) return substr($body,0,$cut_str);
       $max = 128;
     }
-    return preg_replace('/ \w*$/','', substr($body,0,$max)).(strlen($body) > $max ? '...' : '');
+
+    $trail = strlen($body) > $max ? '<a href="/post/'.$this->getSlug().'">&hellip;</a>' : '';
+    return preg_replace('/ \w*$/','', substr($body,0,$max)).$trail;
   }
 
   public function setSlug($slug)
   {
     if(!$slug) $slug = $this->getTitle();
-    $slug = preg_replace('/[^a-zA-Z0-9 ]/','',$slug);
+    $slug = preg_replace('/[^-a-zA-Z0-9 ]/','',$slug);
     $slug = preg_replace('/\s+/','-',$slug);
     return parent::setSlug(strtolower($slug));
   }

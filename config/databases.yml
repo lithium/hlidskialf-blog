@@ -2,4 +2,4 @@ all:
   propel:
     class:          sfPropelDatabase
     param:
-      dsn:          mysql://lithium@localhost/sitename
+      dsn:          mysql://lithium@localhost/android
